@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4664dac-b847-462c-98d9-045a56ac13c1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Booklist/Booklist.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Booklist/Booklist.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Booklist/Booklist.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Booklist/Booklist.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Change/Change.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Change/Change.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Change/ChangeImg/ChangeImg.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Change/ChangeImg/ChangeImg.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Flats/Flats.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Flats/Flats.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Flats/Flats.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Flats/Flats.module.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -35,14 +30,23 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Flats/Flats.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="266">
-                  <caret line="67" column="56" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="56" />
+                <state relative-caret-position="131">
+                  <caret line="58" column="14" lean-forward="true" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
                   <folding>
                     <element signature="e#0#48#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="345">
+                  <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
@@ -144,6 +148,7 @@
         <option value="$PROJECT_DIR$/src/Flats/Flats.js" />
         <option value="$PROJECT_DIR$/src/Booklist/Booklist.module.css" />
         <option value="$PROJECT_DIR$/src/Flats/Flats.module.css" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -238,12 +243,12 @@
       <updated>1605728486930</updated>
       <workItem from="1605728488178" duration="26600000" />
       <workItem from="1605797673150" duration="1562000" />
-      <workItem from="1605823988673" duration="29871000" />
+      <workItem from="1605823988673" duration="30181000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58033000" />
+    <option name="totallyTimeSpent" value="58343000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -376,20 +381,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flats/Flats.module.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="152" column="5" selection-start-line="152" selection-start-column="5" selection-end-line="152" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Flats/Flats.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="67" column="56" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="56" />
+        <state relative-caret-position="131">
+          <caret line="58" column="14" lean-forward="true" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Flats/Flats.module.css">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="152" column="5" selection-start-line="152" selection-start-column="5" selection-end-line="152" selection-end-column="5" />
+        <state relative-caret-position="345">
+          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
         </state>
       </provider>
     </entry>
