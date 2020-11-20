@@ -111,3 +111,48 @@
     position: absolute;
     z-index: 4;
 }
+
+@media (max-width: 800px) {
+    .buttons {
+        display: none;
+    }
+
+    .title {
+        font-size: 2.5vw;
+        font-weight: bold;
+    }
+
+    .address {
+        font-size: 1.3vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        /*width: max-content;*/
+    }
+    .field {
+        width: 100%;
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    .title {
+        font-size: 4.5vw;
+        font-weight: bold;
+    }
+
+    .address {
+        font-size: 2.3vw;
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel {
+        max-width: 100%;
+    }
+}

@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import styles from './Booklist.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Alert from "react-bootstrap/Alert";
+import Button from "react-bootstrap/Button";
 import Flats from '../Flats/Flats'
 import Change from '../Change/Change'
 
@@ -16,7 +18,7 @@ export default function Booklist () {
             }
         })
             .then(data => data.json())
-            .then(json => { setData({info: json.properties, isLoaded: true}); console.log(json.properties) })
+            .then(json => setData({info: json.properties, isLoaded: true}))
             .catch(err => console.warn(err))
     }
 
@@ -37,6 +39,7 @@ export default function Booklist () {
         let info = data.info.filter(el => el.property_id !== key)
         setData({info, isLoaded: true});
         setChange({el: el[0], isChange: true});
+        console.log(el);
     }
     let closeChange = () => {
         let info = data.info;
@@ -59,8 +62,23 @@ export default function Booklist () {
         setChange({el: changeEl.el, isChange: true});
     }
 
+    //Добавление нового элемента в список
+    let createEl = () => {
+        let el = {property_id: String(Math.floor(Math.random() * 10000)),
+                   prop_type: "house",
+                   address: {postal_code: "35001", country: "Ukraine", state: "", city: "Odessa", line: "Primorska, str"},
+                   community: {baths_max: 1, beds_max: 1, sqft_min: 1},
+                   photos: [{href: ''}]}
+        setChange({el, isChange: true});
+    }
+
     return(
         <>
+            <Alert variant="warning" className={styles.buttonAdd}>
+                <Button variant="info"
+                        onClick={() => createEl()}
+                >Add Item</Button>
+            </Alert>
             <div className={styles.mainBlock}>
                 {!data.isLoaded && <div className="spinner-border" role="status"></div>}
                 {data.isLoaded && <Flats info={data.info}

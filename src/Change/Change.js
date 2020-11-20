@@ -20,21 +20,33 @@ export default function Change(props) {
             }
         }
         setItem(newItem);
-    }
+    };
 
+    //Добавление поля для изображений
     let addFieldImg = () => {
         let newItem = item;
         newItem.photos.push({href: ''});
         setItem(newItem);
         props.rerenderEl();
-    }
+    };
+
+    //Удаление поля для изображений
+    let deleteFieldImg = (key) => {
+        let newItem = item;
+        if(newItem.photos.length > 1) {
+            newItem.photos.splice(key, 1);
+            setItem(newItem);
+            props.rerenderEl();
+        }
+    };
 
     // Список изображений
     let renderList = item.photos.map( (el, i) => {
          return <ChangeImg key={i}
+                           num={i}
                            elem={el.href}
-                           key={i}
                            changeImg={changeImg}
+                           deleteFieldImg={deleteFieldImg}
                 />
     });
 
@@ -60,15 +72,28 @@ export default function Change(props) {
             }
         }
         setItem(newItem);
-    }
+    };
+    const [warning, setWarning] = useState(false);
+    //Проверка заполнения полей
+    let checkFields = (func) => {
+        if(item.prop_type && item.address.postal_code && item.address.country &&
+            item.address.state && item.address.city && item.address.line &&
+            item.community.baths_max && item.community.beds_max && item.community.sqft_min) {
+            setWarning(false);
+            func(item);
+        } else {
+            setWarning(true)
+        }
+    };
 
     return(
         <div className={styles.changeBox}>
             <div className={styles.darkFont}
-                 onClick={() => props.closeChange()}
+                 onClick={() => checkFields(props.closeChange)}
             />
             <div className={styles.changeWindow}>
                 <div className={styles.title}>Add changes</div>
+                {warning && <Alert variant="danger">Don't leave empty fields!</Alert>}
                 <div className={styles.innerChanges}>
                     <div className={styles.imgBlock}>
                         <Alert variant="success" className={styles.alert}>Images</Alert>
@@ -94,11 +119,8 @@ export default function Change(props) {
                 </div>
                 <div className={styles.completeButtons}>
                     <Button variant="primary"
-                            onClick={() => props.saveChanges(item)}
+                            onClick={() => checkFields(props.saveChanges)}
                     >Safe</Button>
-                    <Button variant="danger"
-                            onClick={() => props.closeChange()}
-                    >Close</Button>
                 </div>
             </div>
         </div>

@@ -20,7 +20,9 @@ export default function ChangeImg(props) {
                 onChange={(e) => typeIn(e.target.value)}
             />
             <InputGroup.Append>
-                <Button variant="danger">Delete</Button>
+                <Button variant="danger"
+                        onClick={() => props.deleteFieldImg(props.num)}
+                >Delete</Button>
             </InputGroup.Append>
         </InputGroup>
     )

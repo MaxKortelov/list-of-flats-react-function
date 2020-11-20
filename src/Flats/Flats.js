@@ -69,5 +69,6 @@ export default function Flats(props) {
                     {renderImage}
                     </Carousel>
                 </div>}
-            </>)
+            </>
+    )
 }
