@@ -121,6 +121,9 @@ export default function Change(props) {
                     <Button variant="primary"
                             onClick={() => checkFields(props.saveChanges)}
                     >Safe</Button>
+                    <Button variant="danger"
+                            onClick={() => props.closeDeleteChange()}
+                    >Delete</Button>
                 </div>
             </div>
         </div>

@@ -47,12 +47,13 @@ export default function Booklist () {
         setData({info, isLoaded: true});
         setChange({el: [], isChange: false});
     }
-
-    //Изменение в обьект
     let saveChanges = (item) => {
         let info = data.info;
         info.unshift(item);
         setData({info, isLoaded: true});
+        setChange({el: [], isChange: false});
+    }
+    let closeDeleteChange = () => {
         setChange({el: [], isChange: false});
     }
 
@@ -89,6 +90,7 @@ export default function Booklist () {
             {changeEl.isChange && <Change closeChange={closeChange}
                                           el={changeEl.el}
                                           saveChanges={saveChanges}
+                                          closeDeleteChange={closeDeleteChange}
                                           rerenderEl={rerenderEl}
             />}
         </>
