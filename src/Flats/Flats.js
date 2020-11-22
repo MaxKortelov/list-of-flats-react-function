@@ -15,7 +15,7 @@ export default function Flats(props) {
                          onClick={() => watchPic(el.property_id)}
                     >
                         <img src={el.photos[0].href}
-                             alt"img"
+                             alt="img"
                          className={styles.img}
                         />
                     </div>
