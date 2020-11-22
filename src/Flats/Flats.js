@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import styles from './Flats.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from "react-bootstrap/cjs/Carousel";
@@ -15,6 +15,7 @@ export default function Flats(props) {
                          onClick={() => watchPic(el.property_id)}
                     >
                         <img src={el.photos[0].href}
+                             alt"img"
                          className={styles.img}
                         />
                     </div>
@@ -52,7 +53,7 @@ export default function Flats(props) {
     // Рендеринг Картинок в Слайдер
     let renderImage = image.images.map((el, i) => {
         return (<Carousel.Item key={i}>
-            <img src={el.href} alt="picture" />
+            <img src={el.href} alt="img" />
         </Carousel.Item>);
     });
 
