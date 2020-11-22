@@ -9,7 +9,7 @@ export default function ChangeDescr(props) {
     let typeIn = (val) => {
         props.inputChange(elem, val);
         setElem(val);
-    }
+    };
 
     return(
         <InputGroup className="mb-3">

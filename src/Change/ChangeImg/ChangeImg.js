@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
@@ -10,7 +10,7 @@ export default function ChangeImg(props) {
     let typeIn = (val) => {
         props.changeImg(elem, val);
         setElem(val);
-    }
+    };
 
     return(
         <InputGroup className="mb-3">

@@ -20,7 +20,7 @@ export default function Booklist () {
             .then(data => data.json())
             .then(json => setData({info: json.properties, isLoaded: true}))
             .catch(err => console.warn(err))
-    }
+    };
 
     //Выполнения функции получения массива с обьектами
     const [data, setData] = useState({info: [], isLoaded: false});
@@ -30,7 +30,7 @@ export default function Booklist () {
     let deleteEl = (key) => {
         let newInfo = data.info.filter(el => el.property_id !== key)
         setData({info: newInfo, isLoaded: true})
-    }
+    };
 
     //Изменения элемента из списка
     const [changeEl, setChange] = useState({el: [], isChange: false})
@@ -40,28 +40,28 @@ export default function Booklist () {
         setData({info, isLoaded: true});
         setChange({el: el[0], isChange: true});
         console.log(el);
-    }
+    };
     let closeChange = () => {
         let info = data.info;
         info.unshift(changeEl.el);
         setData({info, isLoaded: true});
         setChange({el: [], isChange: false});
-    }
+    };
     let saveChanges = (item) => {
         let info = data.info;
         info.unshift(item);
         setData({info, isLoaded: true});
         setChange({el: [], isChange: false});
-    }
+    };
     let closeDeleteChange = () => {
         setChange({el: [], isChange: false});
-    }
+    };
 
     // Обновить окно
     let rerenderEl = () => {
         setChange({el: changeEl.el, isChange: false});
         setChange({el: changeEl.el, isChange: true});
-    }
+    };
 
     //Добавление нового элемента в список
     let createEl = () => {
@@ -71,7 +71,7 @@ export default function Booklist () {
                    community: {baths_max: 1, beds_max: 1, sqft_min: 1},
                    photos: [{href: ''}]}
         setChange({el, isChange: true});
-    }
+    };
 
     return(
         <>
